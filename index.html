@@ -1,219 +1,26 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <meta name="author" content="Viorel">
-    <link href="style.css" rel="stylesheet">
-    <title>Viorel</title>
+    <title>Payment Page</title>
 </head>
-
 <body>
-  <style>
-    body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Ubuntu', sans-serif;
-    user-select: none;
-    background-color: rgba(85, 86, 87, 0.4);
-    scroll-behavior: smooth;
-}
+    <p>Click the button below to make a payment:</p>
+    <a id="paymentLink" href="#" onclick="redirectToMetaMask()">Make Payment</a>
 
-a {
-    text-decoration: none;
-}
+    <script>
+        function redirectToMetaMask() {
+            // Replace with your actual BNB address and payment amount
+            var address = '0x8AEf14E83dbF0B1Cc1E1eA83abcCaf0256BbEE99';
+            var amount = '0.001';
 
-header {
-    background-image: url("https://i.ibb.co/d7Cz3MH/breakfast-1869599-1280.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    height: 100vh;
-}
+            // Construct the MetaMask URL
+            var metaMaskUrl = 'https://metamask.app.link/send?to=' + address + '&value=' + amount;
 
-#intro {
-    position: relative;
-    color: #f7f5f5;
-    background-color:rgba(85, 86, 87, 0.6);
-    padding: 8px;
-    font-size: 15px;
-    margin: auto;
-    width: 90vw;
-    height: 65vh;
-    top: 16vh;
-    display: table;
-    font-weight: 800;
-}
-
-.center {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 5px;
-}
-
-#avatar {
-    border-radius: 50%;
-    max-width: 80px;
-    height: 80px;
-    margin: 5px;
-    border: 4px solid rgb(52, 123, 182);
-}
-
-@media screen and (max-width: 455px) {
-    #intro {
-        font-size: 16px;
-    }
-}
-
-main {
-    height: 100%;
-}
-
-h2 {
-    text-align: center;
-    font-weight: 600;
-    padding: 5px;
-    color:#3387d6;
-    font-style: italic;
-}
-
-#intro a {
-    display: inline-block;
-    color: #cdd5dd;
-    background-color: rgb(56, 136, 202);
-    width: 220px;
-    height: 20px;
-    text-align: center;
-    padding: 5px 8px;
-    border-radius: 18px;
-}
-
-main {
-    padding: 5px;
-}
-
-.img-project {
-    width: 100%;
-}
-
-.intro {
-    position: relative;
-    font-weight: 600;
-    left: 5%;
-}
-
-#projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 8px;
-}
-
-.code-source {
-    text-align: center;
-    padding: 5px;
-    color: rgb(41, 133, 97);
-    font-weight: 600;
-}
-
-.project-name {
-    text-align: center;
-    font-weight: 800;
-    color: rgb(87, 69, 69);
-}
-
-img {
-    margin: 3px;
-    border-radius: 8px;
-    box-shadow: 0 8px 8px 0 rgba(0, 2, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-}
-  </style>
-    <header>
-        <div id="intro">
-            <div class="center">
-                <p>Welcome to my profile</p>
-                <img id="avatar" src="https://i.ibb.co/Pc9P4Vh/portofolio-header.jpg" alt="viorel">
-                <p style="font-size: 25px;text-align: center;">☕☕☕</p>
-                <p>Hi, i'm Viorel, thanks for your visit!</p>
-                <p>Feel free to like , dislike, comment , or block.</p>
-                <p>I will appreciate your effort. :)</p>
-                <a href="#projects">My Projects (9)</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <h2>Projects</h2>
-        <div id="projects">
-            <div class="project">
-                <p class="project-name">Profile</p>
-                <img class="img-project" src="https://i.ibb.co/1ZtpjZ3/127-0-0-1-5501-Galaxy-S5.png">
-                <a href="https://code.sololearn.com/W7Zq3BCMjV3f/?ref=app#html" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Linux pc</p>
-                <img class="img-project" src="https://i.ibb.co/6JXw01S/127-0-0-1-5500-Galaxy-S5.png">
-                <a href="https://code.sololearn.com/W0B1dSSqAvfe/?ref=app#html" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Secam</p>
-                <img class="img-project" src="https://i.ibb.co/tYPwB7c/I-Git-Hub-Secam-index-html-Galaxy-S5.png">
-                <a href="https://code.sololearn.com/W2QJoPpwGMCM/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Abacus</p>
-                <img class="img-project" src="https://i.ibb.co/mbG9sY9/abac.png">
-                <a href="https://code.sololearn.com/WLXLHI9Zq1Db/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">PapRocSci</p>
-                <img class="img-project" src="https://i.ibb.co/g3mqBT6/E-Git-Hub-Pap-Roc-Sci-index-html-Galaxy-S5.png">
-                <a href="https://code.sololearn.com/WZPRa6MD3YnF/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Instagram UI</p>
-                <img class="img-project" src="https://i.ibb.co/BqRGXCr/E-Git-Hub-Instagram-contest-index-html.png">
-                <a href="https://code.sololearn.com/W9aK5Ba0iAvo/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Win98</p>
-                <img class="img-project" src="https://i.ibb.co/yPrsFj4/I-Git-Hub-Win98-index-html-Galaxy-S5.png">
-                <a href="https://code.sololearn.com/WA7a8A1A5A14/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Phone</p>
-                <img class="img-project" src="https://i.ibb.co/zHprYNY/127-0-0-1-5500-Galaxy-S5-1.png">
-                <a href="https://code.sololearn.com/Wa19A1A7A12a/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-            <div class="project">
-                <p class="project-name">Memorize</p>
-                <img class="img-project" src="https://i.ibb.co/CPPykFM/I-Git-Hub-Memorize-index-html-Galaxy-S5.png">
-                <a href="https://code.sololearn.com/WA22a6A23A20/?ref=app" target="_blank">
-                    <p class="code-source">Source</p>
-                </a>
-            </div>
-        </div>
-    </main>
+            // Redirect the user to MetaMask
+            window.location.href = metaMaskUrl;
+        }
+    </script>
 </body>
-
 </html>
