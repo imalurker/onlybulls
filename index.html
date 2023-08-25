@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
-</head>
-<body>
-    <p>Click the button below to make a payment:</p>
-    <a id="paymentLink" href="#" onclick="redirectToMetaMask()">Make Payment</a>
+<html>
+	<head>
+		<title>Herooo</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    var linkElement = document.getElementById("link");
+    var imageContainer = document.getElementById("imageContainer");
 
-    <script>
-        function redirectToMetaMask() {
-            // Replace with your actual BNB address and payment amount
-            var address = '0x8AEf14E83dbF0B1Cc1E1eA83abcCaf0256BbEE99';
-            var amount = '0.001';
+    linkElement.addEventListener("click", function() {
+        imageContainer.style.display = "block";
+    });
+});
+        </script>
+        <style>
+            #hemanth {
+    width: 50%;
+    color: yellow;
+    background-color: red;
+    padding: 1%;
+    position: absolute;
+    top: 10%;
+    left: 50%; /* Adjust this value to horizontally center the element */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-            // Construct the MetaMask URL
-            var metaMaskUrl = 'https://metamask.app.link/send?to=' + address + '&value=' + amount;
-
-            // Redirect the user to MetaMask
-            window.location.href = metaMaskUrl;
-        }
-    </script>
-</body>
+        </style>
+	</head>
+	<body>
+		<div id = "hemanth">My Hemanth's Academia</div>
+        <div id="link">Click here for VIT Question papers</div>
+        <div id="imageContainer" style="display: none;">
+        <img id="image" src="image.png" alt="Image">
+        </div>
+	</body>
 </html>
