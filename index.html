@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart with Text</title>
+    <title>Love Symbol with Text Inside</title>
     <style>
         body {
             margin: 0;
@@ -15,50 +15,28 @@
             min-height: 100vh;
         }
 
-        .heart {
+        .love-container {
             position: relative;
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            margin-top: 20px;
-            transform: rotate(-45deg);
+            font-size: 100px;
+            color: red;
         }
 
-        .heart::before,
-        .heart::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            border-radius: 100px 100px 0 0;
-        }
-
-        .heart::before {
-            left: -50px;
-            transform: rotate(-45deg);
-        }
-
-        .heart::after {
-            left: 0;
-            transform: rotate(45deg);
-        }
-
-        .text {
+        .love-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 16px;
-            color: white;
+            font-size: 20px;
+            color: black;
+            background-color: transparent;
         }
     </style>
 </head>
 <body>
-    <div class="heart">
-        <div class="text">Love U Teyya</div>
+    <div class="love-container">
+        ❤️
+        <div class="love-text">Love U Teyya</div>
     </div>
 </body>
 </html>
