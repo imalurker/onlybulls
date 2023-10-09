@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart with Name</title>
+    <title>Heart with Text</title>
     <style>
         body {
             margin: 0;
@@ -16,14 +16,12 @@
         }
 
         .heart {
+            position: relative;
             width: 100px;
             height: 100px;
             background-color: red;
-            position: relative;
+            margin-top: 20px;
             transform: rotate(-45deg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .heart::before,
@@ -47,16 +45,20 @@
             transform: rotate(45deg);
         }
 
-        .name {
-            font-size: 20px;
-            color: white;
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
+            font-size: 16px;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="heart">
-        <div class="name">Teyya</div>
+        <div class="text">Love U Teyya</div>
     </div>
 </body>
 </html>
