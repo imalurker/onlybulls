@@ -17,14 +17,62 @@
     height: 5%;
     font-size: 150%; /* Make the text 10% smaller */
   }
-  /* 
-    ================================
-        Best Viewed In Full Page
-    ================================
-*/
-
-/* Hover over a card to flip, can tab too. */
-
+  .common {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 20%;
+    height: 5%;
+    font-size: 150%; /* Make the text 10% smaller */
+  }
+  .about {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translateX(-40%);
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    justify-content: left;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 40%;
+    height: 25%;
+    font-size: 150%; /* Make the text 10% smaller */
+  }
+  .des {
+    position: absolute;
+    top: 20%;
+    left: 72%;
+    transform: translateX(-40%);
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    justify-content: left;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 40%;
+    height: 25%;
+    font-size: 150%; /* Make the text 10% smaller */
+  }
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 /* default */
@@ -54,13 +102,14 @@ body {
 
   width: 200px;
   height: 200px;
-  margin: 10px;
+
   perspective: 1000px;
 }
 .flip-card {
   width: inherit;
   height: inherit;
-  position: relative;
+  position: absolute;
+  top: 80%;
   transform-style: preserve-3d;
   transition: .6s .1s;
 }
