@@ -1,247 +1,53 @@
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
 
-  .only-bulls {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 20%;
-    height: 5%;
-    font-size: 150%; /* Make the text 10% smaller */
-  }
-  .common {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 20%;
-    height: 5%;
-    font-size: 150%; /* Make the text 10% smaller */
-  }
-  .about {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translateX(-40%);
-    display: flex;
-    align-items: center;
-    padding-left: 1%;
-    justify-content: left;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 40%;
-    height: 25%;
-    font-size: 150%; /* Make the text 10% smaller */
-  }
-  .des {
-    position: absolute;
-    top: 20%;
-    left: 72%;
-    transform: translateX(-40%);
-    display: flex;
-    align-items: center;
-    padding-left: 1%;
-    justify-content: left;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 40%;
-    height: 25%;
-    font-size: 150%; /* Make the text 10% smaller */
-  }
-@import url('https://fonts.googleapis.com/css?family=Lato');
+.pricing-plan {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color:whitesmoke;
+  border-radius: 5px;
+  text-align: center;
+}
 
-/* default */
-*,
-*::after,
-*::before {
-  margin: 0;
+.plan-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  list-style: none;
   padding: 0;
-  box-sizing: border-box;
+  margin: 0;
 }
 
-/* body */
-body {
-  min-height: 100vh;
-  padding: 40px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  background: hsl(220, 10%, 12%);
-  font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
+.plan-features li {
+  margin-bottom: 20px;
 }
 
-.flip-card-container {
-
-  width: 200px;
-  height: 200px;
-
-  perspective: 1000px;
-}
-.flip-card {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: 80%;
-  transform-style: preserve-3d;
-  transition: .6s .1s;
-}
-.flip-card-container:hover .flip-card,
-.flip-card-container:focus-within .flip-card {
-  transform: rotateY(180deg);
-}
-.card-front,
-.card-back {
-  width: 100%;
-  height: 100%;
-  border-radius: 24px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-
-  backface-visibility: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.plan-button {
+  padding: 10px;
+  background-color:orange;
+  color:white;
+  border-radius: 5px;
+  border: none;
 }
 
-/* .card-front */
-.card-front {
-  transform: rotateY(0deg);
-  z-index: 2;
-}
-
-/* .card-back */
-.card-back {
-  transform: rotateY(180deg);
-  z-index: 1;
-}
-
-/* figure */
-figure {
-  z-index: -1;
-}
-
-/* figure, .img-bg */
-figure,
-.img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* img */
-img {
-  height: 100%;
-  border-radius: 24px;
-}
-
-/* figcaption */
-figcaption {
-  display: block;
-
-  width: auto;
-  margin-top: 12%;
-  padding: 8px 22px;
-
-  font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 2px;
-  word-spacing: 6px;
-  text-align: right;
-
-  position: absolute;
-  top: 0;
-  right: 20%;
-
-  color: var(--white-1);
-  
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-
-/* hover state */
-.flip-card-container:hover .card-front .img-bg::before {
-  width: 6px;
-  border-left-color: var(--primary);
-  border-right-color: var(--primary);
-}
-
-
-/* button */
-button {
-  font-family: inherit;
-  font-weight: bold;
-  color: var(--white-1);
-
-  letter-spacing: 2px;
-
-  padding: 9px 20px;
-  border: 1px solid var(--grey);
-  border-radius: 1000px;
-  background: transparent;
-  transition: .3s;
-
-  cursor: pointer;
-  
-  position: absolute;
-  top: 42%;
-  right: 30%;
-
-  color: var(--white-1);
-  
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-button:hover,
-button:focus {
-  color: var(--primary);
-  background: hsla(var(--hue), 25%, 10%, .2);
-  border-color: currentColor;
-}
-
-button:active {
-  transform: translate(2px);
+@media (max-width: 1250px) {
+  .pricing-container {
+    flex-direction: column;
+    height: 100%;
+  }
 }
